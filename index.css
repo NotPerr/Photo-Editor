@@ -23,6 +23,11 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+.container.disable :where(.editor-panel, .reset-filter, .save-img) {
+    opacity: 0.6;
+    pointer-events: none;
+} 
+
 .container h2 {
     font-size: 1.8rem;
     font-weight: 500;
@@ -96,10 +101,13 @@ body {
     margin-left: 1.2rem;
     display: flex;
     flex-grow: 1;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
 }
 .preview-img img {
+    max-width: 490px;
+  max-height: 335px;
     width: 100%;
     height: 100%;
     object-fit: contain;
